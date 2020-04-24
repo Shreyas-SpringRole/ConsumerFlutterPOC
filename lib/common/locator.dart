@@ -5,6 +5,7 @@ import 'package:rxdart/rxdart.dart';
 
 import '../home_page.dart';
 import '../login_page.dart';
+import 'constants.dart';
 
 GetIt sl = GetIt.instance;
 
@@ -76,28 +77,3 @@ class NavigationManager {
     currentItem.add(items[index].widget);
   }
 }
-
-// class Api {
-//   final dio = Dio();
-//   Future<List<T>> get<T>(String endpoint) async {
-//     final response = await dio.get(endpoint);
-//     return (jsonDecode(response.data) as List<Map<String,dynamic>>).map((j) => T.fromJson(j)).toList();
-//   }
-// }
-
-abstract class Codable {
-  fromJson(Map<String, dynamic> json);
-}
-
-const LoginRoute = 'login';
-const HomeRoute = 'home';
-const DashboardRoute = 'dashboard';
-const ProfileRoute = 'profile';
-const DetailRoute = 'detail';
-
-const iMowzMasthead = 'assets/mowzMasthead.png';
-const iMulchMasthead = 'assets/mulchMasthead.png';
-const iLeavzMasthead = 'assets/leavzMasthead.png';
-const iAerationMasthead = 'assets/aerationMasthead.png';
-const iPlowzMasthead = 'assets/plowzMasthead.png';
-const iLogo = 'assets/logo.png';
